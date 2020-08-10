@@ -18,6 +18,7 @@ class SumFeatures extends Component{
                     return(
                         <div key={itemHash} className="feature__item">
                         <FeatureItem itemHash={itemHash}
+                        key={itemHash}
                     name={slugify(feature)}
                     checked={item.name === this.props.selected[feature].name}
                     updateFeature={this.props.updateFeature}
@@ -33,7 +34,7 @@ class SumFeatures extends Component{
                     });
                     
                     return (
-                    <Feature feature={feature} options={options} featureHash={featureHash}/>
+                    <Feature key={idx} feature={feature} options={options} featureHash={featureHash}/>
                     );
                 })
         )

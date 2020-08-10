@@ -8,7 +8,9 @@ import SummaryOption from './SummaryOption';
             const featureHash = feature + '-' + idx;
             const selectedOption = this.props.selected[feature];
           return (
-          <SummaryOption featureHash={featureHash} feature={feature} selectedOption={selectedOption}
+          <SummaryOption featureHash={featureHash} feature={feature} 
+          selectedOption={selectedOption}
+          key={idx}
           />)})
         
            )}

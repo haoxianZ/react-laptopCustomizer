@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Summary from './Summary'
+import MainSummary from './MainSummary'
 // Normalizes string as a slug - a string that is safe to use
 // in both URLs and html attributes
 import  SumFeatures  from "./SumFeatures";
@@ -52,11 +52,8 @@ class App extends Component {
           </form>
           <section className="main__summary">
             <h2>Your cart</h2>
-            <Summary 
-            selected={this.state.selected}
+            <MainSummary selected={this.state.selected}
             USCurrencyFormat={this.USCurrencyFormat}/>
-            <SummaryTotal selected={this.state.selected} />
-            
           </section>
         </main>
       </div>

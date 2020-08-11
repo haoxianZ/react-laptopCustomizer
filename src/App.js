@@ -4,8 +4,7 @@ import MainSummary from './MainSummary'
 // in both URLs and html attributes
 import  SumFeatures  from "./SumFeatures";
 import './App.css';
-import SummaryTotal from './SummaryTotal';
-
+import { FEATURES } from "./STORE";
 class App extends Component {
   state = {
     selected: {
@@ -46,7 +45,7 @@ class App extends Component {
         <main>
           <form className="main__form">
             <h2>Customize your laptop</h2>
-            <SumFeatures features={this.props.features} 
+            <SumFeatures features={FEATURES} 
             updateFeature={this.updateFeature} selected={this.state.selected}
             />
           </form>
